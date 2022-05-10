@@ -1,3 +1,5 @@
+import time
+
 residentes = [
     [1, 'Guillermo', 'Pizarro', 1, 2, '05-05-2022'],
     [2, 'Keneth', 'Vera', 1, 5, '05-05-2020'],
@@ -15,5 +17,10 @@ residentes.append( [len(residentes)+1, 'Alexander', 'Leon', 2, 4, '05-07-2021'] 
 #del residentes[0]
 
 for i in range(0, len(residentes)):
+    residentes[i][5] = time.strptime(residentes[i][5], '%d-%m-%Y')
+
+for i in range(0, len(residentes)):
     print( residentes[i][5] )
+
+
 
