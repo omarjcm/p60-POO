@@ -15,4 +15,5 @@ residentes.append( [len(residentes)+1, 'Alexander', 'Leon', 2, 4, '05-07-2021'] 
 #del residentes[0]
 
 for i in range(0, len(residentes)):
-    print( residentes[i] )
+    print( residentes[i][5] )
+
