@@ -51,7 +51,36 @@ while opcion == 'N':
 fecha_actual = datetime.now()
 anio_actual = fecha_actual.strftime('%Y')
 
-
+for paciente in pacientes:
+    print(paciente)
 
 for paciente in pacientes:
-    print( paciente )
+    anio_actual = int(anio_actual)
+    anio_nacimiento = int(paciente[2])
+
+    if (anio_actual - anio_nacimiento) >= 65:
+        paciente[4] = paciente[4] - paciente[4]*0.1
+
+for paciente in pacientes:
+    print(paciente)
+
+# Cantidad de consultas por especialidad.
+# Total recaudado por especialidad.
+# Total de descuentos.
+# Total en consultas.
+
+# Total de pacientes.
+print('Total de pacientes: {}'.format( len(pacientes) ) )
+
+# Total de pacientes por sexo.
+num_pacientes_m = 0
+num_pacientes_f = 0
+for paciente in pacientes:
+    if paciente[1] == 'M':
+        num_pacientes_m += 1
+    if paciente[1] == 'F':
+        num_pacientes_f += 1
+
+print('Total de pacientes por sexo.')
+print('Masculino: {}'.format(num_pacientes_m))
+print('Femenino: {}'.format(num_pacientes_f))
