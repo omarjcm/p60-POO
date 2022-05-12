@@ -10,6 +10,7 @@ especialidades = [
 pacientes = [
     ['Pablo Banderas', 'M', '1996', '3', 50],
     ['Angie Santos', 'F', '2001', '4', 45],
+    ['Julia Child', 'F', '1948', '2', 35],
     ['Luis Parrales', 'M', '1950', '2', 35]
 ]
 
@@ -51,22 +52,22 @@ while opcion == 'N':
 fecha_actual = datetime.now()
 anio_actual = fecha_actual.strftime('%Y')
 
-for paciente in pacientes:
-    print(paciente)
+# Cantidad de consultas por especialidad.
+# Total recaudado por especialidad.
 
+# Total de los descuentos realizados.
+total_descuentos = 0.0
 for paciente in pacientes:
     anio_actual = int(anio_actual)
     anio_nacimiento = int(paciente[2])
 
     if (anio_actual - anio_nacimiento) >= 65:
-        paciente[4] = paciente[4] - paciente[4]*0.1
+        descuento = paciente[4]*0.1
+        paciente[4] = paciente[4] - descuento
+        total_descuentos += descuento
 
-for paciente in pacientes:
-    print(paciente)
+print('Total de descuentos: {}'.format(total_descuentos))
 
-# Cantidad de consultas por especialidad.
-# Total recaudado por especialidad.
-# Total de descuentos.
 # Total en consultas.
 
 # Total de pacientes.
