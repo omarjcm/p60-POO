@@ -1,11 +1,11 @@
 from datetime import datetime 
 
 especialidades = [
-    ['1', 'Medicina General', 0],
-    ['2', 'Cardiologia', 0],
-    ['3', 'Traumatologia', 0],
-    ['4', 'Dermatologia', 0],
-    ['5', 'Pediatria', 0]
+    ['1', 'Medicina General', 0, 0.0],
+    ['2', 'Cardiologia', 0, 0.0],
+    ['3', 'Traumatologia', 0, 0.0],
+    ['4', 'Dermatologia', 0, 0.0],
+    ['5', 'Pediatria', 0, 0.0]
 ]
 pacientes = [
     ['Pablo Banderas', 'M', '1996', '3', 50],
@@ -111,3 +111,18 @@ for especialidad in especialidades:
         print('{} - {} vez.'.format(especialidad[1], especialidad[2]))
 
 # Total recaudado por especialidad.
+for paciente in pacientes:
+    if especialidades[0][0] == paciente[3]:
+        especialidades[0][3] += paciente[4]
+    elif especialidades[1][0] == paciente[3]:
+        especialidades[1][3] += paciente[4]
+    elif especialidades[2][0] == paciente[3]:
+        especialidades[2][3] += paciente[4]
+    elif especialidades[3][0] == paciente[3]:
+        especialidades[3][3] += paciente[4]
+    elif especialidades[4][0] == paciente[3]:
+        especialidades[4][3] += paciente[4]
+
+for especialidad in especialidades:
+    if (especialidad[2] != 1):
+        print('Recaudado por {} - {}.'.format(especialidad[1], especialidad[3]))
