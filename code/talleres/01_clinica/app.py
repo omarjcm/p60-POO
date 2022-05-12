@@ -5,12 +5,20 @@ especialidades = [
     [4, 'Dermatologia'],
     [5, 'Pediatria']
 ]
-pacientes = []
+pacientes = [
+    ['Pablo Banderas', 'M', '1996', '3', 50],
+    ['Angie Santos', 'F', '2001', '4', 45],
+    ['Luis Parrales', 'M', '1950', '2', 35]
+]
 
 print('Sistema de la Clinica UPS')
 
 opcion = 'N'
 while opcion == 'N':
+    opcion = input('¿Desea ingresar un nuevo paciente? [S-N]: ')
+    if opcion == 'N':
+        break
+
     nombre = input('Nombre del Paciente: ')
     sexo = input('Sexo [M-F]: ')
     anio = input('Año de Nacimiento: ')
@@ -36,8 +44,7 @@ while opcion == 'N':
         valor = 40
     
     pacientes.append( [nombre, sexo, anio, especialidad, valor] )
-
     opcion = input('¿Desea salir? ')
 
 for paciente in pacientes:
-    print(  )
+    print( paciente )
