@@ -1,15 +1,19 @@
 from datetime import datetime 
 
 especialidades = [
-    [1, 'Medicina General'],
-    [2, 'Cardiologia'],
-    [3, 'Traumatologia'],
-    [4, 'Dermatologia'],
-    [5, 'Pediatria']
+    ['1', 'Medicina General', 0],
+    ['2', 'Cardiologia', 0],
+    ['3', 'Traumatologia', 0],
+    ['4', 'Dermatologia', 0],
+    ['5', 'Pediatria', 0]
 ]
 pacientes = [
     ['Pablo Banderas', 'M', '1996', '3', 50],
     ['Angie Santos', 'F', '2001', '4', 45],
+    ['Julian Tamayo', 'M', '2002', '3', 50],
+    ['Marcelo Bolaños', 'M', '2001', '3', 50],
+    ['Samantha Iglesias', 'F', '2003', '1', 30],
+    ['Marco Guevara', 'M', '2003', '1', 30],
     ['Julia Child', 'F', '1948', '2', 35],
     ['Luis Parrales', 'M', '1950', '2', 35]
 ]
@@ -52,9 +56,6 @@ while opcion == 'N':
 fecha_actual = datetime.now()
 anio_actual = fecha_actual.strftime('%Y')
 
-# Cantidad de consultas por especialidad.
-# Total recaudado por especialidad.
-
 # Total de los descuentos realizados.
 total_descuentos = 0.0
 for paciente in pacientes:
@@ -69,7 +70,11 @@ for paciente in pacientes:
 print('Total de descuentos: {}'.format(total_descuentos))
 
 # Total en consultas.
+total_consultas = 0.0
+for paciente in pacientes:
+    total_consultas += paciente[4]
 
+print('Total en consultas: {}'.format(total_consultas))
 # Total de pacientes.
 print('Total de pacientes: {}'.format( len(pacientes) ) )
 
@@ -85,3 +90,24 @@ for paciente in pacientes:
 print('Total de pacientes por sexo.')
 print('Masculino: {}'.format(num_pacientes_m))
 print('Femenino: {}'.format(num_pacientes_f))
+
+# Cantidad de consultas por especialidad.
+for paciente in pacientes:
+    if especialidades[0][0] == paciente[3]:
+        especialidades[0][2] += 1
+    elif especialidades[1][0] == paciente[3]:
+        especialidades[1][2] += 1
+    elif especialidades[2][0] == paciente[3]:
+        especialidades[2][2] += 1
+    elif especialidades[3][0] == paciente[3]:
+        especialidades[3][2] += 1
+    elif especialidades[4][0] == paciente[3]:
+        especialidades[4][2] += 1
+
+for especialidad in especialidades:
+    if (especialidad[2] != 1):
+        print('{} - {} veces.'.format(especialidad[1], especialidad[2]))
+    else:
+        print('{} - {} vez.'.format(especialidad[1], especialidad[2]))
+
+# Total recaudado por especialidad.
