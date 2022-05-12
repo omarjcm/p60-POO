@@ -1,3 +1,5 @@
+from datetime import datetime 
+
 especialidades = [
     [1, 'Medicina General'],
     [2, 'Cardiologia'],
@@ -45,6 +47,11 @@ while opcion == 'N':
     
     pacientes.append( [nombre, sexo, anio, especialidad, valor] )
     opcion = input('¿Desea salir? ')
+
+fecha_actual = datetime.now()
+anio_actual = fecha_actual.strftime('%Y')
+
+
 
 for paciente in pacientes:
     print( paciente )
