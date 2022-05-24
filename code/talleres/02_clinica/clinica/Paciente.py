@@ -1,9 +1,6 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from select import select
-
-
 class Paciente:
     def __init__(self, nombre, apellido, sexo, anio_nacimiento):
         self.__nombre = nombre
@@ -11,9 +8,34 @@ class Paciente:
         self.__sexo = sexo
         self.__anio_nacimiento = anio_nacimiento
 
-    def getNombre(self):
+    @property
+    def nombre(self):
         return self.__nombre
 
-    def setNombre(self, nombre):
-        self.__nombre = nombre
+    @nombre.setter
+    def nombre(self, valor):
+        self.__nombre = valor
 
+    @property
+    def apellido(self):
+        return self.__apellido
+
+    @apellido.setter
+    def apellido(self, valor):
+        self.__apellido = valor
+
+    @property
+    def sexo(self):
+        return self.__sexo
+
+    @sexo.setter
+    def sexo(self, valor):
+        self.__sexo = valor
+
+    @property
+    def anio_nacimiento(self):
+        return self.__anio_nacimiento
+
+    @anio_nacimiento.setter
+    def anio_nacimiento(self, valor):
+        self.__anio_nacimiento = valor
