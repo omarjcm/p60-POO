@@ -1,12 +1,16 @@
 from Paciente import *
 from Consulta import *
 
-paciente1 = Paciente('Pablo', 'Banderas', 'M', '1996')
-#print(paciente1.__nombre)
-#print(paciente1.getNombre())
-print(paciente1.nombre)
-paciente1.apellido = 'Banderas Alcivar'
-print(paciente1.apellido)
+pacientes = [
+    Paciente('Pablo', 'Banderas', 'M', 1996),
+    Paciente('Angie', 'Santos', 'F', 2001),
+    Paciente('Julian', 'Tamayo', 'M', 2002),
+    Paciente('Marcelo', 'Bolaños', 'M', 2001),
+    Paciente('Samantha', 'Iglesias', 'F', 2003),
+    Paciente('Marco' ,'Guevara', 'M', 2003),
+    Paciente('Julia', 'Child', 'F', 1948),
+    Paciente('Luis', 'Parrales', 'M', 1950)
+]
 
-consulta1 = Consulta('01-02-2022', None, None)
-print(consulta1.fecha_consulta)
+for paciente in pacientes:
+    print(paciente.nombre)
