@@ -39,3 +39,6 @@ class Paciente:
     @anio_nacimiento.setter
     def anio_nacimiento(self, valor):
         self.__anio_nacimiento = valor
+
+    def __str__(self):
+        return self.__nombre + ' ' + self.__apellido
