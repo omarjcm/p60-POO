@@ -3,6 +3,8 @@ from Consulta import *
 from Especialidad import *
 from datetime import datetime
 
+frecuencias = [0, 0, 0, 0, 0]
+
 especialidades = [
     Especialidad('Medicina General', 30),
     Especialidad('Cardiologia', 35),
@@ -75,6 +77,26 @@ def reporte_total_x_sexo():
     print('Masculino: {}'.format(num_pacientes_m))
     print('Femenino: {}'.format(num_pacientes_f))
 
+def reporte_cantidad_x_especialidad():
+    # Cantidad de consultas por especialidad.
+    for consulta in consultas:
+        if consulta.ref_especialidad.nombre == especialidades[0].nombre:
+            frecuencias[0] += 1
+        elif consulta.ref_especialidad.nombre == especialidades[1].nombre:
+            frecuencias[1] += 1
+        elif consulta.ref_especialidad.nombre == especialidades[2].nombre:
+            frecuencias[2] += 1
+        elif consulta.ref_especialidad.nombre == especialidades[3].nombre:
+            frecuencias[3] += 1
+        elif consulta.ref_especialidad.nombre == especialidades[4].nombre:
+            frecuencias[4] += 1
+
+    for indice in range(0, len(frecuencias)):
+        if (frecuencias[indice] != 1):
+            print('{} - {} veces.'.format(especialidades[indice], frecuencias[indice]))
+        else:
+            print('{} - {} vez.'.format(especialidades[indice], frecuencias[indice]))
+
 
 def menu_principal():
     print('Sistema de la Clinica UPS')
@@ -108,6 +130,7 @@ def menu_principal():
     reporte_descuentos_realizados()
     reporte_total_consultas()
     reporte_total_x_sexo()
+    reporte_cantidad_x_especialidad()
 
 def menu_especialidades():
     print('Seleccionar la especialidad: ')

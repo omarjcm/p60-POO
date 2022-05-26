@@ -9,6 +9,7 @@ class Consulta:
         self.__valor_total = 0.0
         self.ref_paciente = paciente
         self.ref_especialidad = especialidad
+        self.especialidades = []
 
     @property
     def fecha_consulta(self):
