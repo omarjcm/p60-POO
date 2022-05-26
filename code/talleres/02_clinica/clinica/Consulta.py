@@ -18,5 +18,21 @@ class Consulta:
     def fecha_consulta(self, valor):
         self.__fecha_consulta = datetime.strptime(valor, '%d-%m-%Y')
 
+    @property
+    def valor_descuento(self):
+        return self.__valor_descuento
+
+    @valor_descuento.setter
+    def valor_descuento(self, valor):
+        self.__valor_descuento = valor
+
+    @property
+    def valor_total(self):
+        return self.__valor_total
+
+    @valor_total.setter
+    def valor_total(self, valor):
+        self.__valor_total = valor
+
     def __str__(self):
         return str(self.ref_paciente) + ' - ' + str(self.ref_especialidad)

@@ -33,6 +33,35 @@ consultas = [
     Consulta('10-05-2022', pacientes[7], especialidades[1]),
 ]
 
+def reporte_descuentos_realizados():
+    fecha_actual = datetime.now()
+    anio_actual = fecha_actual.strftime('%Y')
+
+    # Total de los descuentos realizados.
+    total_descuentos = 0.0
+    for consulta in consultas:
+        anio_actual = int(anio_actual)
+        anio_nacimiento = consulta.ref_paciente.anio_nacimiento
+
+        if (anio_actual - anio_nacimiento) >= 65:
+            consulta.valor_descuento = consulta.ref_especialidad.valor*0.1
+            consulta.valor_total = consulta.ref_especialidad.valor - consulta.valor_descuento
+            total_descuentos += consulta.valor_descuento
+
+    print('Total de descuentos: {}'.format(total_descuentos))
+
+
+def reporte_total_consultas():
+    # Total en consultas.
+    total_consultas = 0.0
+    for consulta in consultas:
+        total_consultas += consulta.valor_total
+
+    print('Total en consultas: {}'.format(total_consultas))
+    # Total de pacientes.
+    print('Total de pacientes: {}'.format( len(consultas) ) )
+
+
 def menu_principal():
     print('Sistema de la Clinica UPS')
 
@@ -59,8 +88,11 @@ def menu_principal():
         fecha_actual = datetime.now()
         consulta = Consulta(fecha_actual, paciente, especialidad)
         consultas.append(consulta)
-        
+
         opcion = input('¿Desea salir? [S-N]')
+
+    reporte_descuentos_realizados()
+    reporte_total_consultas()
 
 def menu_especialidades():
     print('Seleccionar la especialidad: ')
@@ -72,3 +104,5 @@ def menu_especialidades():
 
 if __name__ == '__main__':
     menu_principal()
+
+
