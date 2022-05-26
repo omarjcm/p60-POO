@@ -4,6 +4,7 @@ from Especialidad import *
 from datetime import datetime
 
 frecuencias = [0, 0, 0, 0, 0]
+totales = [0.0, 0.0, 0.0, 0.0, 0.0]
 
 especialidades = [
     Especialidad('Medicina General', 30),
@@ -49,9 +50,10 @@ def reporte_descuentos_realizados():
             consulta.valor_descuento = consulta.ref_especialidad.valor*0.1
             consulta.valor_total = consulta.ref_especialidad.valor - consulta.valor_descuento
             total_descuentos += consulta.valor_descuento
+        else:
+            consulta.valor_total = consulta.ref_especialidad.valor
 
     print('Total de descuentos: {}'.format(total_descuentos))
-
 
 def reporte_total_consultas():
     # Total en consultas.
@@ -97,6 +99,11 @@ def reporte_cantidad_x_especialidad():
         else:
             print('{} - {} vez.'.format(especialidades[indice], frecuencias[indice]))
 
+def reporte_recaudado_x_especialidad():
+    # Total recaudado por especialidad.
+    for indice in range(0, len(frecuencias)):
+        print('Recaudado por {} - {}.'.format(especialidades[indice], frecuencias[indice]*consultas[indice].valor_total))
+
 
 def menu_principal():
     print('Sistema de la Clinica UPS')
@@ -131,6 +138,7 @@ def menu_principal():
     reporte_total_consultas()
     reporte_total_x_sexo()
     reporte_cantidad_x_especialidad()
+    reporte_recaudado_x_especialidad()
 
 def menu_especialidades():
     print('Seleccionar la especialidad: ')
