@@ -61,6 +61,20 @@ def reporte_total_consultas():
     # Total de pacientes.
     print('Total de pacientes: {}'.format( len(consultas) ) )
 
+def reporte_total_x_sexo():
+    # Total de pacientes por sexo.
+    num_pacientes_m = 0
+    num_pacientes_f = 0
+    for consulta in consultas:
+        if consulta.ref_paciente.sexo == 'M':
+            num_pacientes_m += 1
+        if consulta.ref_paciente.sexo == 'F':
+            num_pacientes_f += 1
+
+    print('Total de pacientes por sexo.')
+    print('Masculino: {}'.format(num_pacientes_m))
+    print('Femenino: {}'.format(num_pacientes_f))
+
 
 def menu_principal():
     print('Sistema de la Clinica UPS')
@@ -93,6 +107,7 @@ def menu_principal():
 
     reporte_descuentos_realizados()
     reporte_total_consultas()
+    reporte_total_x_sexo()
 
 def menu_especialidades():
     print('Seleccionar la especialidad: ')
