@@ -9,3 +9,9 @@ class Docente(Persona):
             print('bla')
         else:
             print('Tema de conversacion: ' + tema)
+
+    def enseniar(self, horas=None, tema=None):
+        if horas is not None and tema is not None:
+            print('Las {} horas a revisar con respecto al tema {}.'.format(horas, tema))
+        else:
+            print('No existen horas para las clases respectivas')
