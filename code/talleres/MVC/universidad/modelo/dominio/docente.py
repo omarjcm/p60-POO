@@ -3,7 +3,7 @@ from persona import Persona
 class Docente(Persona):
     def __init__(self, cedula, nombre, apellido, fecha_ingreso):
         super().__init__(cedula, nombre, apellido)
-        self.__fecha_ingreso
+        self.__fecha_ingreso = fecha_ingreso
 
     @property
     def fecha_ingreso(self):

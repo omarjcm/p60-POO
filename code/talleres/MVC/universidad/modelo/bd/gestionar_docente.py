@@ -10,7 +10,9 @@ class Gestionar_Docente(Gestionar_Objeto):
     def modificar(self, objeto):
         for elemento in self.ref_docentes:
             if elemento.cedula == objeto.cedula:
-                elemento.edad = objeto.edad
+                elemento.nombre = objeto.nombre
+                elemento.apellido = objeto.apellido
+                elemento.fecha_ingreso = objeto.fecha_ingreso
 
     def eliminar(self, objeto):
         for elemento in self.ref_docentes:
