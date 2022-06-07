@@ -29,13 +29,28 @@ class Menu_Principal():
 
     def opcion_seleccionada(self, opcion):
         if opcion == 1:
+            print('REGISTRAR')
             cedula = input('Cedula: ')
             nombre = input('Nombre: ')
             apellido = input('Apellido: ')
             fecha_ingreso = input('Fecha de Ingreso: ')
             objeto = Docente(cedula, nombre, apellido, fecha_ingreso)
             self.ref_gestionar_docente.insertar(objeto)
+        elif opcion == 2:
+            print('MODIFICAR')
+            cedula = input('Ingresar Cedula para identificar: ')
+            nombre = input('Nombre: ')
+            apellido = input('Apellido: ')
+            fecha_ingreso = input('Fecha de Ingreso: ')
 
+            objeto = Docente(cedula, nombre, apellido, fecha_ingreso)
+            self.ref_gestionar_docente.modificar(objeto)
+        elif opcion == 3:
+            print('ELIMINAR')
+            cedula = input('Ingresar Cedula para identificar: ')
+
+            objeto = Docente(cedula, None, None, None)
+            self.ref_gestionar_docente.eliminar(objeto)
         elif opcion == 4:
             self.ref_gestionar_docente.leer(None)
 

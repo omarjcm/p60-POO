@@ -17,7 +17,7 @@ class Gestionar_Docente(Gestionar_Objeto):
     def eliminar(self, objeto):
         for elemento in self.ref_docentes:
             if elemento.cedula == objeto.cedula:
-                del elemento
+                self.ref_docentes.remove(elemento)
 
     def leer(self, objeto):
         if objeto is not None:
