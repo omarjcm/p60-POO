@@ -20,7 +20,11 @@ class Gestionar_Docente(Gestionar_Objeto):
                 del elemento
 
     def leer(self, objeto):
-        for elemento in self.ref_docentes:
-            if elemento.cedula == objeto.cedula:
-                return elemento
+        if objeto is not None:
+            for elemento in self.ref_docentes:
+                if elemento.cedula == objeto.cedula:
+                    return elemento
+        else:
+            for elemento in self.ref_docentes:
+                print(elemento)
 

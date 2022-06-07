@@ -12,3 +12,6 @@ class Docente(Persona):
     @fecha_ingreso.setter
     def fecha_ingreso(self, nuevo_valor):
         self.__fecha_ingreso = nuevo_valor
+
+    def __str__(self):
+        return self.cedula + ' : ' + self.nombre + ' - ' + self.apellido

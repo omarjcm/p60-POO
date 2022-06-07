@@ -36,4 +36,7 @@ class Menu_Principal():
             objeto = Docente(cedula, nombre, apellido, fecha_ingreso)
             self.ref_gestionar_docente.insertar(objeto)
 
+        elif opcion == 4:
+            self.ref_gestionar_docente.leer(None)
+
 
