@@ -1,4 +1,4 @@
-from persona import Persona
+from modelo.dominio.persona import Persona
 
 class Docente(Persona):
     def __init__(self, cedula, nombre, apellido, fecha_ingreso):
