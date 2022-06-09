@@ -2,10 +2,10 @@
 #-*- coding: utf-8 -*-
 
 class Consulta:
-	def __init__(self):
-		self.fecha_consulta = None
-		self.valor_descuento = None
-		self.valor_total = None
+	def __init__(self, fecha_consulta, valor_descuento, valor_total):
+		self.__fecha_consulta = fecha_consulta
+		self.__valor_descuento = valor_descuento
+		self.__valor_total = valor_total
 		self.ref_paciente = None
 		self.ref_especialidad = None
 

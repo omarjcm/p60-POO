@@ -1,22 +1,22 @@
-from abc import ABC, abstractmethod
+from abc import ABC, staticmethod
 
 class Gestionar_Objeto(ABC):
 	def __init__(self):
 		pass
-	
-	@abstractmethod
+
+	@staticmethod
 	def insertar(self, objeto):
 		pass
 
-	@abstractmethod
+	@staticmethod
 	def modificar(self, objeto):
 		pass
 
-	@abstractmethod
+	@staticmethod
 	def eliminar(self, objeto):
 		pass
 
-	@abstractmethod
+	@staticmethod
 	def listar(self, objeto):
 		pass
 

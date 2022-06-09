@@ -3,4 +3,8 @@
 
 class Menu_Principal:
 	def __init__(self):
-		self.ref_gestionar_consultas = None
+		self.ref_gestionar_consulta = None
+		self.ref_gestionar_paciente = None
+		self.ref_gestionar_especialidad = None
+
+	
