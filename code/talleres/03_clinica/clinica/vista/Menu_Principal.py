@@ -83,7 +83,7 @@ class Menu_Principal:
 		elif opcion == 1 and subopcion == 4:
 			self.ref_gestionar_consulta.listar(None)
 		elif opcion == 1 and subopcion == 5:
-			pass
+			self.ref_gestionar_consulta.reportes()
 		elif opcion == 2 and subopcion == 1:
 			pass
 		elif opcion == 2 and subopcion == 2:

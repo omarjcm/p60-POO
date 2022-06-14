@@ -61,49 +61,55 @@ class Gestionar_Consulta(Gestionar_Objeto):
 			frecuencias.append( 0 )
 
 		for consulta in self.ref_consultas:
-			if consulta.ref_especialidad.nombre == especialidades[0]:
+			if consulta.ref_especialidad.nombre == especialidades[0].nombre:
 				frecuencias[0] += 1
-			if consulta.ref_especialidad.nombre == especialidades[1]:
+			elif consulta.ref_especialidad.nombre == especialidades[1].nombre:
 				frecuencias[1] += 1
-			if consulta.ref_especialidad.nombre == especialidades[2]:
+			elif consulta.ref_especialidad.nombre == especialidades[2].nombre:
 				frecuencias[2] += 1
-			if consulta.ref_especialidad.nombre == especialidades[3]:
+			elif consulta.ref_especialidad.nombre == especialidades[3].nombre:
 				frecuencias[3] += 1
-			if consulta.ref_especialidad.nombre == especialidades[4]:
+			elif consulta.ref_especialidad.nombre == especialidades[4].nombre:
 				frecuencias[4] += 1
 
 		indice = 0
 		for especialidad in especialidades:
-			print('Especialidad: {} - frecuencia: {}'.format(especialidad, frecuencias[indice]))
+			print('Especialidad: {} - frecuencia: {}'.format(especialidad.nombre, frecuencias[indice]))
 			indice += 1
 
 	def reporte_recaudado_x_especialidad(self):
 		gestionar_especialidades = Gestionar_Especialidad()
 		especialidades = gestionar_especialidades.ref_especialidades
+		print(especialidades[0])
 
 		recaudado = []
 		for especialidad in especialidades:
 			recaudado.append( 0.0 )
 
 		for consulta in self.ref_consultas:
-			if consulta.ref_especialidad.nombre == especialidades[0]:
+			if consulta.ref_especialidad.nombre == especialidades[0].nombre:
 				recaudado[0] += consulta.valor_total
-			if consulta.ref_especialidad.nombre == especialidades[1]:
+			elif consulta.ref_especialidad.nombre == especialidades[1].nombre:
 				recaudado[1] += consulta.valor_total
-			if consulta.ref_especialidad.nombre == especialidades[2]:
+			elif consulta.ref_especialidad.nombre == especialidades[2].nombre:
 				recaudado[2] += consulta.valor_total
-			if consulta.ref_especialidad.nombre == especialidades[3]:
+			elif consulta.ref_especialidad.nombre == especialidades[3].nombre:
 				recaudado[3] += consulta.valor_total
-			if consulta.ref_especialidad.nombre == especialidades[4]:
+			elif consulta.ref_especialidad.nombre == especialidades[4].nombre:
 				recaudado[4] += consulta.valor_total
 
 		indice = 0
 		for especialidad in especialidades:
-			print('Especialidad: {} - Valor recaudado: ${}'.format(especialidad, recaudado[indice]))
+			print('Especialidad: {} - Valor recaudado: ${}'.format(especialidad.nombre, recaudado[indice]))
 			indice += 1
 
 	def reporte_descuentos_realizados(self):
-		pass
+		valor_descuento = 0.0
+
+		for consulta in self.ref_consultas:
+			valor_descuento += consulta.valor_descuento
+
+		print('El valor total de descuentos es: ${}'.format(valor_descuento))
 
 	def reportes(self):
 		self.reporte_descuentos_realizados()
