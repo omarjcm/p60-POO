@@ -15,5 +15,6 @@ if __name__ == '__main__':
 
         app.menu_opcion(opcion)
         subopcion = int(input('Ingresar opcion: '))
-        app.opcion_seleccionada(opcion, subopcion)
+        if subopcion != 0:
+            app.opcion_seleccionada(opcion, subopcion)
 

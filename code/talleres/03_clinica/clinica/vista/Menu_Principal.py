@@ -34,6 +34,11 @@ class Menu_Principal:
 		print('[3].- Eliminar {}'.format(self.opciones[opcion]))
 		print('[4].- Buscar {}'.format(self.opciones[opcion]))
 
+		if opcion == 0:
+			print('[5].- Reportes de {}s'.format(self.opciones[opcion]))
+
+		print('[0].- Salir')
+
 	def opcion_seleccionada(self, opcion, subopcion):
 		if opcion == 1 and subopcion == 1:
 			print('REGISTRAR CONSULTA')
@@ -77,6 +82,8 @@ class Menu_Principal:
 			self.ref_gestionar_consulta.eliminar(objeto)
 		elif opcion == 1 and subopcion == 4:
 			self.ref_gestionar_consulta.listar(None)
+		elif opcion == 1 and subopcion == 5:
+			pass
 		elif opcion == 2 and subopcion == 1:
 			pass
 		elif opcion == 2 and subopcion == 2:
