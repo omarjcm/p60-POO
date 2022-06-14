@@ -21,3 +21,6 @@ class Especialidad:
 	@valor.setter
 	def valor(self, nuevo_valor):
 		self.__valor = nuevo_valor
+
+	def __str__(self):
+		return '{}. Valor: ${}.'.format(self.nombre, self.valor)

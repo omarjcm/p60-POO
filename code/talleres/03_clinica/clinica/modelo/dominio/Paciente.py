@@ -48,3 +48,6 @@ class Paciente:
 	@anio_nacimiento.setter
 	def anio_nacimiento(self, nuevo_valor):
 		self.__anio_nacimiento = nuevo_valor
+
+	def __str__(self):
+		return 'Cedula: {}. Nombres: {} {}.'.format(self.cedula, self.nombre, self.apellido)
