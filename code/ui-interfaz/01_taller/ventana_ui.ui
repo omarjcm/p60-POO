@@ -6,46 +6,51 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>720</width>
-    <height>412</height>
+    <width>730</width>
+    <height>227</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="texto_lbl">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>170</y>
-      <width>341</width>
-      <height>20</height>
+      <x>60</x>
+      <y>30</y>
+      <width>601</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>11</pointsize>
+      <pointsize>20</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>Programación Orientada a Objetos</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="cambiar_btn">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>220</y>
-      <width>82</width>
-      <height>25</height>
+      <x>290</x>
+      <y>110</y>
+      <width>151</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Cambiar Texto</string>
     </property>
    </widget>
   </widget>
@@ -54,7 +59,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>720</width>
+     <width>730</width>
      <height>23</height>
     </rect>
    </property>

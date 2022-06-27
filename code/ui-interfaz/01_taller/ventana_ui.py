@@ -11,22 +11,25 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(730, 227)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(170, 170, 341, 20))
+        self.texto_lbl = QtWidgets.QLabel(self.centralwidget)
+        self.texto_lbl.setGeometry(QtCore.QRect(60, 30, 601, 51))
         font = QtGui.QFont()
-        font.setPointSize(11)
-        self.label.setFont(font)
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(310, 220, 82, 25))
-        self.pushButton.setObjectName("pushButton")
+        font.setPointSize(20)
+        self.texto_lbl.setFont(font)
+        self.texto_lbl.setAlignment(QtCore.Qt.AlignCenter)
+        self.texto_lbl.setObjectName("texto_lbl")
+        self.cambiar_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.cambiar_btn.setGeometry(QtCore.QRect(290, 110, 151, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.cambiar_btn.setFont(font)
+        self.cambiar_btn.setObjectName("cambiar_btn")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 730, 23))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -39,8 +42,8 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "TextLabel"))
-        self.pushButton.setText(_translate("MainWindow", "PushButton"))
+        self.texto_lbl.setText(_translate("MainWindow", "Programación Orientada a Objetos"))
+        self.cambiar_btn.setText(_translate("MainWindow", "Cambiar Texto"))
 
 
 if __name__ == "__main__":
