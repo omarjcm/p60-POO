@@ -1,6 +1,6 @@
-from estudiante_ui import *
+from vista.vestudiante_ui import *
 
-class Estudiante(QtWidgets.QMainWindow, Estudiante_UI):
+class VEstudiante(QtWidgets.QMainWindow, Ui_VEstudiante):
     dato_signal = QtCore.pyqtSignal(object)  # <-- This is the sub window's signal
 
     def __init__(self, *args, **kwargs):

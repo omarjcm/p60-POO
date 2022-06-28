@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\Core i5 11va\Documents\GitHub\p60-POO\code\ui-interfaz\07_taller\vista\gestionar_estudiante.ui'
+# Form implementation generated from reading ui file 'c:\Users\Core i5 11va\Documents\GitHub\p60-POO\code\ui-interfaz\07_taller\vista\gestionar_vestudiante.ui'
 #
 # Created by: PyQt6 UI code generator 6.2.3
 #
@@ -9,10 +9,10 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Gestionar_Estudiante(object):
+class Ui_Gestionar_VEstudiante(object):
     def setupUi(self, Gestionar_Estudiante):
         Gestionar_Estudiante.setObjectName("Gestionar_Estudiante")
-        Gestionar_Estudiante.resize(691, 460)
+        Gestionar_Estudiante.setGeometry(QtCore.QRect(0, 0, 691, 460))
         self.centralwidget = QtWidgets.QWidget(Gestionar_Estudiante)
         self.centralwidget.setObjectName("centralwidget")
         self.estudiantes_tbl = QtWidgets.QTableWidget(self.centralwidget)
@@ -94,24 +94,24 @@ class Ui_Gestionar_Estudiante(object):
 
     def retranslateUi(self, Gestionar_Estudiante):
         _translate = QtCore.QCoreApplication.translate
-        Gestionar_Estudiante.setWindowTitle(_translate("Gestionar_Estudiante", "Gestion de Estudiantes"))
+        Gestionar_Estudiante.setWindowTitle(_translate("Gestionar_VEstudiante", "Gestion de Estudiantes"))
         item = self.estudiantes_tbl.horizontalHeaderItem(0)
-        item.setText(_translate("Gestionar_Estudiante", "Cédula"))
+        item.setText(_translate("Gestionar_VEstudiante", "Cédula"))
         item = self.estudiantes_tbl.horizontalHeaderItem(1)
-        item.setText(_translate("Gestionar_Estudiante", "Nombres"))
+        item.setText(_translate("Gestionar_VEstudiante", "Nombres"))
         item = self.estudiantes_tbl.horizontalHeaderItem(2)
-        item.setText(_translate("Gestionar_Estudiante", "Apellidos"))
+        item.setText(_translate("Gestionar_VEstudiante", "Apellidos"))
         item = self.estudiantes_tbl.horizontalHeaderItem(3)
-        item.setText(_translate("Gestionar_Estudiante", "Edad"))
+        item.setText(_translate("Gestionar_VEstudiante", "Edad"))
         item = self.estudiantes_tbl.horizontalHeaderItem(4)
-        item.setText(_translate("Gestionar_Estudiante", "Editar"))
+        item.setText(_translate("Gestionar_VEstudiante", "Editar"))
         item = self.estudiantes_tbl.horizontalHeaderItem(5)
-        item.setText(_translate("Gestionar_Estudiante", "Eliminar"))
-        self.agregar_btn.setText(_translate("Gestionar_Estudiante", "Agregar"))
-        self.cancelar_btn.setText(_translate("Gestionar_Estudiante", "Cancelar"))
-        self.label.setText(_translate("Gestionar_Estudiante", "Buscar:"))
-        self.buscar_btn.setText(_translate("Gestionar_Estudiante", "Buscar"))
-        self.label_2.setText(_translate("Gestionar_Estudiante", "Gestión de Estudiantes"))
-        self.menuEstudiante.setTitle(_translate("Gestionar_Estudiante", "Estudiante"))
-        self.agregar_menu.setText(_translate("Gestionar_Estudiante", "Agregar"))
-        self.salir_menu.setText(_translate("Gestionar_Estudiante", "Salir"))
+        item.setText(_translate("Gestionar_VEstudiante", "Eliminar"))
+        self.agregar_btn.setText(_translate("Gestionar_VEstudiante", "Agregar"))
+        self.cancelar_btn.setText(_translate("Gestionar_VEstudiante", "Cancelar"))
+        self.label.setText(_translate("Gestionar_VEstudiante", "Buscar:"))
+        self.buscar_btn.setText(_translate("Gestionar_VEstudiante", "Buscar"))
+        self.label_2.setText(_translate("Gestionar_VEstudiante", "Gestión de Estudiantes"))
+        self.menuEstudiante.setTitle(_translate("Gestionar_VEstudiante", "Estudiante"))
+        self.agregar_menu.setText(_translate("Gestionar_VEstudiante", "Agregar"))
+        self.salir_menu.setText(_translate("Gestionar_VEstudiante", "Salir"))

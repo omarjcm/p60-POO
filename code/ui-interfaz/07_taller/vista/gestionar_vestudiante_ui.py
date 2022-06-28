@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'gestionar_estudiante.ui'
+# Form implementation generated from reading ui file 'gestionar_vestudiante.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -11,11 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Gestionar_Estudiante_UI(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(691, 460)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_Gestionar_VEstudiante(object):
+    def setupUi(self, Gestionar_Estudiante):
+        Gestionar_Estudiante.setObjectName("Gestionar_Estudiante")
+        Gestionar_Estudiante.setGeometry(QtCore.QRect(0, 0, 691, 460))
+        self.centralwidget = QtWidgets.QWidget(Gestionar_Estudiante)
         self.centralwidget.setObjectName("centralwidget")
         self.estudiantes_tbl = QtWidgets.QTableWidget(self.centralwidget)
         self.estudiantes_tbl.setGeometry(QtCore.QRect(20, 170, 641, 192))
@@ -72,48 +72,48 @@ class Gestionar_Estudiante_UI(object):
         self.label_2.setFont(font)
         self.label_2.setAlignment(QtCore.Qt.AlignCenter)
         self.label_2.setObjectName("label_2")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        Gestionar_Estudiante.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(Gestionar_Estudiante)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 691, 23))
         self.menubar.setObjectName("menubar")
         self.menuEstudiante = QtWidgets.QMenu(self.menubar)
         self.menuEstudiante.setObjectName("menuEstudiante")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        Gestionar_Estudiante.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(Gestionar_Estudiante)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
-        self.actionAgregar = QtWidgets.QAction(MainWindow)
-        self.actionAgregar.setObjectName("actionAgregar")
-        self.actionSalir = QtWidgets.QAction(MainWindow)
-        self.actionSalir.setObjectName("actionSalir")
-        self.menuEstudiante.addAction(self.actionAgregar)
+        Gestionar_Estudiante.setStatusBar(self.statusbar)
+        self.agregar_menu = QtWidgets.QAction(Gestionar_Estudiante)
+        self.agregar_menu.setObjectName("agregar_menu")
+        self.salir_menu = QtWidgets.QAction(Gestionar_Estudiante)
+        self.salir_menu.setObjectName("salir_menu")
+        self.menuEstudiante.addAction(self.agregar_menu)
         self.menuEstudiante.addSeparator()
-        self.menuEstudiante.addAction(self.actionSalir)
+        self.menuEstudiante.addAction(self.salir_menu)
         self.menubar.addAction(self.menuEstudiante.menuAction())
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Gestionar_Estudiante)
+        QtCore.QMetaObject.connectSlotsByName(Gestionar_Estudiante)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, Gestionar_Estudiante):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Gestion de Estudiantes"))
+        Gestionar_Estudiante.setWindowTitle(_translate("Gestionar_VEstudiante", "Gestion de Estudiantes"))
         item = self.estudiantes_tbl.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "Cédula"))
+        item.setText(_translate("Gestionar_VEstudiante", "Cédula"))
         item = self.estudiantes_tbl.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "Nombres"))
+        item.setText(_translate("Gestionar_VEstudiante", "Nombres"))
         item = self.estudiantes_tbl.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "Apellidos"))
+        item.setText(_translate("Gestionar_VEstudiante", "Apellidos"))
         item = self.estudiantes_tbl.horizontalHeaderItem(3)
-        item.setText(_translate("MainWindow", "Edad"))
+        item.setText(_translate("Gestionar_VEstudiante", "Edad"))
         item = self.estudiantes_tbl.horizontalHeaderItem(4)
-        item.setText(_translate("MainWindow", "Editar"))
+        item.setText(_translate("Gestionar_VEstudiante", "Editar"))
         item = self.estudiantes_tbl.horizontalHeaderItem(5)
-        item.setText(_translate("MainWindow", "Eliminar"))
-        self.agregar_btn.setText(_translate("MainWindow", "Agregar"))
-        self.cancelar_btn.setText(_translate("MainWindow", "Cancelar"))
-        self.label.setText(_translate("MainWindow", "Buscar:"))
-        self.buscar_btn.setText(_translate("MainWindow", "Buscar"))
-        self.label_2.setText(_translate("MainWindow", "Gestión de Estudiantes"))
-        self.menuEstudiante.setTitle(_translate("MainWindow", "Estudiante"))
-        self.actionAgregar.setText(_translate("MainWindow", "Agregar"))
-        self.actionSalir.setText(_translate("MainWindow", "Salir"))
+        item.setText(_translate("Gestionar_VEstudiante", "Eliminar"))
+        self.agregar_btn.setText(_translate("Gestionar_VEstudiante", "Agregar"))
+        self.cancelar_btn.setText(_translate("Gestionar_VEstudiante", "Cancelar"))
+        self.label.setText(_translate("Gestionar_VEstudiante", "Buscar:"))
+        self.buscar_btn.setText(_translate("Gestionar_VEstudiante", "Buscar"))
+        self.label_2.setText(_translate("Gestionar_VEstudiante", "Gestión de Estudiantes"))
+        self.menuEstudiante.setTitle(_translate("Gestionar_VEstudiante", "Estudiante"))
+        self.agregar_menu.setText(_translate("Gestionar_VEstudiante", "Agregar"))
+        self.salir_menu.setText(_translate("Gestionar_VEstudiante", "Salir"))

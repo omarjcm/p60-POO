@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'estudiante.ui'
+# Form implementation generated from reading ui file 'vestudiante.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -11,11 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Estudiante_UI(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(534, 313)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_VEstudiante(object):
+    def setupUi(self, VEstudiante):
+        VEstudiante.setObjectName("VEstudiante")
+        VEstudiante.resize(534, 313)
+        self.centralwidget = QtWidgets.QWidget(VEstudiante)
         self.centralwidget.setObjectName("centralwidget")
         self.titulo_lbl = QtWidgets.QLabel(self.centralwidget)
         self.titulo_lbl.setGeometry(QtCore.QRect(10, 10, 511, 41))
@@ -80,21 +80,21 @@ class Estudiante_UI(object):
         font.setPointSize(12)
         self.cancelar_btn.setFont(font)
         self.cancelar_btn.setObjectName("cancelar_btn")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        VEstudiante.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(VEstudiante)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        VEstudiante.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(VEstudiante)
+        QtCore.QMetaObject.connectSlotsByName(VEstudiante)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, VEstudiante):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Estudiante"))
-        self.titulo_lbl.setText(_translate("MainWindow", "Estudiante"))
-        self.cedula_lbl.setText(_translate("MainWindow", "Cédula:"))
-        self.nombre_lbl.setText(_translate("MainWindow", "Nombres:"))
-        self.apellido_lbl.setText(_translate("MainWindow", "Apellidos:"))
-        self.edad_lbl.setText(_translate("MainWindow", "Edad:"))
-        self.guardar_btn.setText(_translate("MainWindow", "Guardar"))
-        self.cancelar_btn.setText(_translate("MainWindow", "Cancelar"))
+        VEstudiante.setWindowTitle(_translate("VEstudiante", "Estudiante"))
+        self.titulo_lbl.setText(_translate("VEstudiante", "Estudiante"))
+        self.cedula_lbl.setText(_translate("VEstudiante", "Cédula:"))
+        self.nombre_lbl.setText(_translate("VEstudiante", "Nombres:"))
+        self.apellido_lbl.setText(_translate("VEstudiante", "Apellidos:"))
+        self.edad_lbl.setText(_translate("VEstudiante", "Edad:"))
+        self.guardar_btn.setText(_translate("VEstudiante", "Guardar"))
+        self.cancelar_btn.setText(_translate("VEstudiante", "Cancelar"))

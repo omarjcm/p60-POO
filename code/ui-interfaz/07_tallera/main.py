@@ -11,6 +11,11 @@ class WidgetGallery(QtWidgets.QDialog):
         self.table.setItem(0, 0, col_1)
         self.table.setItem(0, 1, col_2)
         self.table.setCellWidget(0, 2, deleteButton)
+        col_1 = QtWidgets.QTableWidgetItem("Hola")
+        col_2 =QtWidgets.QTableWidgetItem("mundo")
+        self.table.setItem(1, 0, col_1)
+        self.table.setItem(1, 1, col_2)
+        self.table.setCellWidget(1, 2, deleteButton)
         self.mainLayout = QtWidgets.QGridLayout(self)
         self.mainLayout.addWidget(self.table)
 

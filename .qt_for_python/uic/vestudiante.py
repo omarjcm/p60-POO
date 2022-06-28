@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\Core i5 11va\Documents\GitHub\p60-POO\code\ui-interfaz\07_taller\vista\estudiante.ui'
+# Form implementation generated from reading ui file 'c:\Users\Core i5 11va\Documents\GitHub\p60-POO\code\ui-interfaz\07_taller\vista\vestudiante.ui'
 #
 # Created by: PyQt6 UI code generator 6.2.3
 #
