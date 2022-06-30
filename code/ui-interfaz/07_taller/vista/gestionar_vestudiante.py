@@ -3,7 +3,7 @@ from vista.gestionar_vestudiante_ui import *
 from vista.vestudiante import *
 from vista.mensaje.pregunta import *
 
-from PyQt5.QtWidgets import QMessageBox, QDesktopWidget
+from PyQt5.QtWidgets import QDesktopWidget
 
 class Gestionar_VEstudiante(QtWidgets.QMainWindow, Ui_Gestionar_VEstudiante):
     def __init__(self, *args, **kwargs):
@@ -29,7 +29,6 @@ class Gestionar_VEstudiante(QtWidgets.QMainWindow, Ui_Gestionar_VEstudiante):
         indice = 0
         for estudiante in self.gestionar_estudiantes.ref_estudiantes:
             self.estudiantes_tbl.setRowCount(indice + 1)
-
             # declaracion de los botones que iran dentro de la tabla.
             modificar_btn = QtWidgets.QPushButton("Modificar")
             modificar_btn.clicked.connect(self.modificar_estudiante)
@@ -50,9 +49,11 @@ class Gestionar_VEstudiante(QtWidgets.QMainWindow, Ui_Gestionar_VEstudiante):
     def modificar_estudiante(self):
         button = self.sender()
         if button:
+            self.tipo_accion = 'MODIFICAR'
             row = self.estudiantes_tbl.indexAt(button.pos()).row()
-            estudiante = self.gestionar_estudiantes.ref_estudiantes[row]
-            self.gestionar_estudiantes.modificar(estudiante)
+            self.estudiante = self.gestionar_estudiantes.ref_estudiantes[row]
+            self.gestionar_estudiantes.modificar(self.estudiante)
+            self.abrir_ventana()
 
     @QtCore.pyqtSlot()
     def eliminar_estudiante(self):
@@ -63,17 +64,31 @@ class Gestionar_VEstudiante(QtWidgets.QMainWindow, Ui_Gestionar_VEstudiante):
         
         if button and consulta.acepto():
             row = self.estudiantes_tbl.indexAt(button.pos()).row()
-            estudiante = self.gestionar_estudiantes.ref_estudiantes[row]
-            self.gestionar_estudiantes.eliminar(estudiante)
-            
+            self.gestionar_estudiantes.eliminar( self.gestionar_estudiantes.ref_estudiantes[row] )
+
             self.estudiantes_tbl.removeRow(row)
             self.estudiantes_tbl.clearSelection()
-
+    
     def agregar(self):
-        self.estudiante = QtWidgets.QMainWindow()
-        self.ui = VEstudiante()
-        self.ui.dato_signal.connect(self.actualizar_tabla)
+        self.tipo_accion = 'AGREGAR'
+        self.estudiante = None
+        self.abrir_ventana()
+        
+    def abrir_ventana(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = VEstudiante(self)
+        self.ui.obtener_ventana(self)
+        self.ui.dato_signal.connect(self.obtener_dato)
         self.ui.show()
+
+    def obtener_dato(self, objeto):
+        self.estudiante = objeto
+        print(self.estudiante.nombre)
+
+        if self.tipo_accion == 'AGREGAR':
+            pass
+        elif self.tipo_accion == 'MODIFICAR':
+            pass
 
     def actualizar_tabla(self, data):
         pass
