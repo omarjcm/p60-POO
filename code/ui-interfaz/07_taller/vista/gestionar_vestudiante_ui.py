@@ -10,7 +10,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_Gestionar_VEstudiante(object):
     def setupUi(self, Gestionar_Estudiante):
         Gestionar_Estudiante.setObjectName("Gestionar_Estudiante")
