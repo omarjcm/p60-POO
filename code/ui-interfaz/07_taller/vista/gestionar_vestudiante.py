@@ -83,7 +83,9 @@ class Gestionar_VEstudiante(QtWidgets.QMainWindow, Ui_Gestionar_VEstudiante):
 
     def obtener_dato(self, objeto):
         self.estudiante = objeto
+        print(self.estudiante.cedula)
         print(self.estudiante.nombre)
+        print(self.estudiante.apellido)
 
         if self.tipo_accion == 'AGREGAR':
             pass

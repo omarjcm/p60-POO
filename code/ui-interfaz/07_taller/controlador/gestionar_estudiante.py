@@ -30,7 +30,6 @@ class Gestionar_Estudiante(Gestionar_Objeto):
                 self.ref_estudiantes.remove(elemento)
 
     def leer(self, objeto):
-        elementos = []
         if objeto is not None:
             for elemento in self.ref_estudiantes:
                 if elemento.cedula == objeto.cedula:

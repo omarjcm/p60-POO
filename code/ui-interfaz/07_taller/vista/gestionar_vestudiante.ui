@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Gestionar_VEstudiante</class>
+ <class>Gestionar_Estudiante</class>
  <widget class="QMainWindow" name="Gestionar_Estudiante">
   <property name="geometry">
    <rect>
