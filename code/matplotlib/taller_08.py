@@ -1,4 +1,5 @@
 from cProfile import label
+from turtle import color
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -9,12 +10,16 @@ def graficar(tamanio):
     Y3_ = [ x**1.5 for x in X_ ]
     Y4_ = [ x**2 for x in X_ ]
 
+    plt.suptitle('Ejemplo de funciones simultaneas', fontsize=24)
+
     plt.subplot2grid((2,2),(0,0), colspan=2)
-    plt.title('Cuatro funciones en un solo grafico', fontsize=14)
+    plt.title('Cuatro funciones en un solo grafico', fontsize=10)
     plt.plot(X_, Y1_)
     plt.plot(X_, Y2_)
     plt.plot(X_, Y3_)
     plt.plot(X_, Y4_)
+    plt.grid(True, ls='-', color='0.5')
+    plt.text(4.2, 30, 'f(x)=x**2')
 
     plt.subplot2grid((2,2),(1,0), colspan=2)
     plt.title('Dos funciones en un solo grafico', fontsize=10)
@@ -28,7 +33,6 @@ def graficar(tamanio):
     plt.annotate('f(x)=x**0.5', xytext=(7, 5), xy=(6, 2.6), 
                     ha='center', va='center',
                     arrowprops={'arrowstyle':'->', 'color':'red'})
-
     plt.show()
 
 if __name__ == '__main__':
