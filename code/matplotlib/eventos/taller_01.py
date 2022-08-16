@@ -9,11 +9,15 @@ def graficar():
     fig.canvas.mpl_connect('axes_leave_event', salir_eje)
     fig.canvas.mpl_connect('button_press_event', presionar_boton)
     fig.canvas.mpl_connect('scroll_event', rodar_boton)
+    fig.canvas.mpl_connect('motion_notify_event', posicionamiento)
 
     fig.canvas.manager.set_window_title('Ejemplo de eventos en matplotlib.')
     ax = fig.add_subplot(111)
     ax.set_title('Haz click con el raton o mueve su rueda.')
     plt.show()
+
+def posicionamiento(event):
+    print('Coordenadas del cursor en pixeles - x:{} y:{}'.format(event.x, event.y))
 
 def rodar_boton(event):
     if event.button == 'up':
