@@ -8,11 +8,18 @@ def graficar():
     fig.canvas.mpl_connect('axes_enter_event', ingresar_eje)
     fig.canvas.mpl_connect('axes_leave_event', salir_eje)
     fig.canvas.mpl_connect('button_press_event', presionar_boton)
+    fig.canvas.mpl_connect('scroll_event', rodar_boton)
 
     fig.canvas.manager.set_window_title('Ejemplo de eventos en matplotlib.')
     ax = fig.add_subplot(111)
     ax.set_title('Haz click con el raton o mueve su rueda.')
     plt.show()
+
+def rodar_boton(event):
+    if event.button == 'up':
+        print('Has movido hacia arriba la rueda del boton del mouse.')
+    elif event.button == 'down':
+        print('Has movido hacia abajo la rueda del boton del mouse.')
 
 def presionar_boton(event):
     if event.button == 1:
