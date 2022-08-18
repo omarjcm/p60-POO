@@ -56,7 +56,7 @@ class Grafico(QtWidgets.QMainWindow, Ui_MainWindow):
         data.append( int(self.diciembre_txt.text()) )
 
         self.widget.canvas.ax1.clear()
-        self.widget.canvas.ax1.set_xlim([0.5, 12.5])
+        self.widget.canvas.ax1.set_xlim([-1, 12])
         self.widget.canvas.ax1.set_ylim([0, max(data)*1.1])
         self.widget.canvas.ax1.set_xticks(x)
         self.widget.canvas.ax1.set_xticklabels(meses)
