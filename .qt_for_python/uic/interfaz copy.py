@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'c:\Users\Core i5 11va\Documents\GitHub\p60-POO\code\matplotlib\pyqt-matplotlib\cuatro_graficos\interfaz.ui'
+# Form implementation generated from reading ui file 'c:\Users\Core i5 11va\Documents\GitHub\p60-POO\code\matplotlib\pyqt-matplotlib\cuatro_graficos\interfaz copy.ui'
 #
 # Created by: PyQt6 UI code generator 6.2.3
 #
@@ -12,11 +12,11 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1165, 784)
+        MainWindow.resize(844, 493)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.formLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.formLayoutWidget.setGeometry(QtCore.QRect(40, 182, 181, 341))
+        self.formLayoutWidget.setGeometry(QtCore.QRect(30, 30, 181, 343))
         self.formLayoutWidget.setObjectName("formLayoutWidget")
         self.formLayout = QtWidgets.QFormLayout(self.formLayoutWidget)
         self.formLayout.setContentsMargins(0, 0, 0, 0)
@@ -94,17 +94,14 @@ class Ui_MainWindow(object):
         self.diciembre_txt.setObjectName("diciembre_txt")
         self.formLayout.setWidget(11, QtWidgets.QFormLayout.ItemRole.FieldRole, self.diciembre_txt)
         self.generar_grafico_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.generar_grafico_btn.setGeometry(QtCore.QRect(400, 690, 601, 41))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.generar_grafico_btn.setFont(font)
+        self.generar_grafico_btn.setGeometry(QtCore.QRect(340, 400, 381, 31))
         self.generar_grafico_btn.setObjectName("generar_grafico_btn")
-        self.widget = Dashboard(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(260, 30, 871, 631))
+        self.widget = Grafico_Barra(self.centralwidget)
+        self.widget.setGeometry(QtCore.QRect(260, 30, 551, 341))
         self.widget.setObjectName("widget")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1165, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 844, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -130,4 +127,4 @@ class Ui_MainWindow(object):
         self.label_11.setText(_translate("MainWindow", "Noviembre:"))
         self.label_12.setText(_translate("MainWindow", "Diciembre:"))
         self.generar_grafico_btn.setText(_translate("MainWindow", "Generar Gráfico"))
-from dashboard import Dashboard
+from graficobarra import Grafico_Barra

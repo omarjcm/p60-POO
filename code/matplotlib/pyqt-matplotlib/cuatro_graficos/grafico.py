@@ -1,4 +1,3 @@
-from turtle import width
 from interfaz_ui import *
 import numpy as np
 import matplotlib.ticker as ticker
@@ -56,13 +55,35 @@ class Grafico(QtWidgets.QMainWindow, Ui_MainWindow):
         data.append( int(self.noviembre_txt.text()) )
         data.append( int(self.diciembre_txt.text()) )
 
-        self.widget.canvas.ax.clear()
-        self.widget.canvas.ax.axis( [-0.5, 11.5, 0, max(data)+10] )
-        self.widget.canvas.ax.xaxis.set_major_locator(ticker.FixedLocator((x)))
-        self.widget.canvas.ax.xaxis.set_major_formatter(ticker.FixedFormatter((meses)))
-        self.widget.canvas.ax.bar(x, data, align='center', width=1)
-        self.widget.canvas.draw()
+        self.widget.canvas.ax1.clear()
+        self.widget.canvas.ax1.set_xlim([0.5, 12.5])
+        self.widget.canvas.ax1.set_ylim([0, max(data)*1.1])
+        self.widget.canvas.ax1.set_xticks(x)
+        self.widget.canvas.ax1.set_xticklabels(meses)
+        self.widget.canvas.ax1.bar(x, data, align='center', width=1)
 
+        self.widget.canvas.ax2.clear()
+        self.widget.canvas.ax2.set_xlim([1, 12])
+        self.widget.canvas.ax2.set_ylim([0, max(data)*1.1])
+        self.widget.canvas.ax2.set_xticks(x)
+        self.widget.canvas.ax2.set_xticklabels(x, fontsize=8, color='red')
+        self.widget.canvas.ax2.yaxis.set_tick_params(labelsize=8, labelcolor='blue')
+        self.widget.canvas.ax2.grid(axis='both', color='0.7', linestyle='-')
+        self.widget.canvas.ax2.plot(x, data, color='green')
+
+        self.widget.canvas.ax3.clear()
+        self.widget.canvas.ax3.set_xlim([0.5, 12.5])
+        self.widget.canvas.ax3.set_ylim([0, max(data)*1.1])
+        self.widget.canvas.ax3.set_xticks(x)
+        self.widget.canvas.ax3.set_xticklabels(x, fontsize=8)
+        self.widget.canvas.ax3.yaxis.set_tick_params(labelsize=8)
+        self.widget.canvas.ax3.grid(axis='y', color='0.3', linestyle='-')
+        self.widget.canvas.ax3.scatter(x, data, color='magenta')
+
+        self.widget.canvas.ax4.clear()
+        self.widget.canvas.ax4.pie(data, labels=meses)
+
+        self.widget.canvas.draw()
 
 
 if __name__ == "__main__":

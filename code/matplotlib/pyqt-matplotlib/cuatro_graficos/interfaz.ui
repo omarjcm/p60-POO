@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>716</width>
-    <height>493</height>
+    <width>1165</width>
+    <height>784</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QWidget" name="formLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
+      <x>40</x>
+      <y>182</y>
       <width>181</width>
-      <height>343</height>
+      <height>341</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
@@ -149,23 +149,28 @@
    <widget class="QPushButton" name="generar_grafico_btn">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>390</y>
-      <width>231</width>
-      <height>31</height>
+      <x>400</x>
+      <y>690</y>
+      <width>601</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Generar Gráfico</string>
     </property>
    </widget>
-   <widget class="Grafico_Barra" name="widget" native="true">
+   <widget class="Dashboard" name="widget" native="true">
     <property name="geometry">
      <rect>
       <x>260</x>
       <y>30</y>
-      <width>401</width>
-      <height>341</height>
+      <width>871</width>
+      <height>631</height>
      </rect>
     </property>
    </widget>
@@ -175,8 +180,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>716</width>
-     <height>26</height>
+     <width>1165</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
@@ -184,9 +189,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>Grafico_Barra</class>
+   <class>Dashboard</class>
    <extends>QWidget</extends>
-   <header>graficobarra.h</header>
+   <header>dashboard.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

@@ -14,7 +14,7 @@ from grafico_barra import Grafico_Barra
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(716, 493)
+        MainWindow.resize(844, 493)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.formLayoutWidget = QtWidgets.QWidget(self.centralwidget)
@@ -96,14 +96,14 @@ class Ui_MainWindow(object):
         self.diciembre_txt.setObjectName("diciembre_txt")
         self.formLayout.setWidget(11, QtWidgets.QFormLayout.FieldRole, self.diciembre_txt)
         self.generar_grafico_btn = QtWidgets.QPushButton(self.centralwidget)
-        self.generar_grafico_btn.setGeometry(QtCore.QRect(340, 390, 231, 31))
+        self.generar_grafico_btn.setGeometry(QtCore.QRect(340, 400, 381, 31))
         self.generar_grafico_btn.setObjectName("generar_grafico_btn")
         self.widget = Grafico_Barra(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(260, 30, 401, 341))
+        self.widget.setGeometry(QtCore.QRect(260, 30, 551, 341))
         self.widget.setObjectName("widget")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 716, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 844, 26))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -129,3 +129,4 @@ class Ui_MainWindow(object):
         self.label_11.setText(_translate("MainWindow", "Noviembre:"))
         self.label_12.setText(_translate("MainWindow", "Diciembre:"))
         self.generar_grafico_btn.setText(_translate("MainWindow", "Generar Gráfico"))
+
