@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from dashboard import Dashboard
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -132,4 +132,3 @@ class Ui_MainWindow(object):
         self.label_11.setText(_translate("MainWindow", "Noviembre:"))
         self.label_12.setText(_translate("MainWindow", "Diciembre:"))
         self.generar_grafico_btn.setText(_translate("MainWindow", "Generar Gráfico"))
-from dashboard import Dashboard
